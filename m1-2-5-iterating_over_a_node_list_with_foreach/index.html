@@ -32,12 +32,19 @@
     PROBLEM 1: Create a variable "headerElements" containing all h3 elements in the web page. Loop over headerElements using the forEach() method and log each element's text content.
     HINT: Use the innerText property to get the text content
     */
-    // ENTER CODE HERE
+    const headerElements = document.querySelectorAll('h3')
+    headerElements.forEach((element) => {
+      console.log(element.innerText)
+    }); //study! 
 
     /*
     PROBLEM 2: Use the forEach() method to print all but the second h3 element in headerElements.
     */
-   // ENTER CODE HERE
+    headerElements.forEach((element, index) => {
+      if (index === 1) return
+      console.log(element)
+    })
+    //study!
 
     /*
     PROBLEM 3: Create an array of the text content of all h3 elements (Use the forEach() method). Log the created array to the console.
